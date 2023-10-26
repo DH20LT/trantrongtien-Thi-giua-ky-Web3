@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block items %}
+    {% if is_logged_in %}
+        <li class="nav-item">
+            <a class="nav-link" href="/new_project">New Project</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
+        </li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">Quan Ly Du An </h1>
+        <h4 class="mb-3">Cong Cu Tuyet Voi Danh Cho Ban</h4>
+    
+    </div>
+    <!-- Jumbotron -->
+{% endblock %}
